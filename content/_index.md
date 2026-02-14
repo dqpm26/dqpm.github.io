@@ -1,7 +1,7 @@
 ---
 title: "DQPM"
 description: "Dynamical Quasi-Particle Model"
-layout: "homepage"
+layout: "homepage" 
 ---
 
 # DQPM ingredients
