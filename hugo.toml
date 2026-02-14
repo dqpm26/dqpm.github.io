@@ -1,7 +1,6 @@
 baseURL = "https://dqpm26.github.io/"
 languageCode = "it-it"
 title = "DQPM Collaboration"
-theme = "hugo-profile"
 
 [params]
   description = "Dynamical Quasi-Particle Model for QGP"
