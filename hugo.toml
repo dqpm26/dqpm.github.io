@@ -1,12 +1,9 @@
-baseURL = "https://"
-languageCode = "en-en"
+baseURL = "https://dqpm26.github.io/"
+languageCode = "en"
 title = "DQPM Collaboration"
 
 [params]
   description = "Dynamical Quasi-Particle Model for QGP"
-  # Colore moderno (Blue Scientifico)
-  highlightColor = "#2563eb"
-  darkMode = true
 
 [menu]
   [[menu.main]]
