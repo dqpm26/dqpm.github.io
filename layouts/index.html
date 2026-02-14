@@ -1,18 +1,92 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
+<html lang="en"> <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | DQPM Collaboration</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+
+    <style>
+        :root {
+            /* Sfondo grigio molto chiaro e moderno */
+            --background-body: #f4f4f7;
+            /* Testo grigio scuro (meno stancante del nero puro) */
+            --text-main: #333333;
+            /* Blu scientifico per i link */
+            --links: #0056b3;
+            /* Font leggermente più grande per la leggibilità mobile */
+            font-size: 18px;
+        }
+
+        body {
+            max-width: 900px; /* Più largo per sfruttare lo spazio desktop */
+            line-height: 1.6;
+            padding: 1rem;
+            background-color: var(--background-body);
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e2e2;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap; /* Permette al menu di andare a capo su schermi piccoli */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--links);
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #003d80;
+            text-decoration: underline;
+        }
+
+        /* Ottimizzazioni specifiche per Mobile */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            nav {
+                margin-left: 0;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            nav a {
+                margin-left: 0; /* Rimuoviamo il margine per usare il gap */
+            }
+            
+            font-size: 17px; /* Leggermente più piccolo su schermi minuscoli */
+        }
+    </style>
 </head>
 <body>
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; padding-bottom: 1rem; margin-bottom: 2rem;">
-        <h1 style="margin: 0; font-size: 1.5rem; color: var(--links);">{{ .Title }}</h1>
+    <header>
+        <h1>{{ .Title }}</h1>
         <nav>
-            <a href="/" style="margin-left: 15px; font-weight: bold;">Home</a>
-            <a href="/about" style="margin-left: 15px;">About</a>
-            <a href="/publications" style="margin-left: 15px;">Publications</a>
-            <a href="/talks" style="margin-left: 15px;">Talks</a>
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
         </nav>
     </header>
 
@@ -20,7 +94,7 @@
         {{ .Content }}
     </main>
 
-    <footer style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 1rem; font-size: 0.8rem; opacity: 0.8;">
+    <footer style="margin-top: 4rem; border-top: 1px solid #e2e2e2; padding-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
         <p>© 2026 DQPM Project | Built with Hugo & Water.css</p>
     </footer>
 </body>
