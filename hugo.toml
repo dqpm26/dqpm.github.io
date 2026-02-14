@@ -1,5 +1,5 @@
-baseURL = "https://dqpm26.github.io/"
-languageCode = "it-it"
+baseURL = "https://"
+languageCode = "en-en"
 title = "DQPM Collaboration"
 
 [params]
