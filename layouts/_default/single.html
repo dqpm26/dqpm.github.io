@@ -9,10 +9,9 @@
     <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; padding-bottom: 1rem; margin-bottom: 2rem;">
         <h1 style="margin: 0; font-size: 1.5rem; color: var(--links);">{{ .Title }}</h1>
         <nav>
-            <a href="/" style="margin-left: 15px; font-weight: bold;">Home</a>
-            <a href="/about" style="margin-left: 15px;">About</a>
-            <a href="/publications" style="margin-left: 15px;">Publications</a>
-            <a href="/talks" style="margin-left: 15px;">Talks</a>
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" style="margin-left: 15px;">{{ .Name }}</a>
+          {{ end }}
         </nav>
     </header>
 
