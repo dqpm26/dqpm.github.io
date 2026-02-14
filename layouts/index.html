@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title>{{ .Title }}</title>
+    <meta charset="UTF-8">
+    <title>{{ .Title }} | DQPM Collaboration</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
-    <header><h1>{{ .Title }}</h1></header>
-    <main>{{ .Content }}</main>
+    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; padding-bottom: 1rem; margin-bottom: 2rem;">
+        <h1 style="margin: 0; font-size: 1.5rem; color: var(--links);">{{ .Title }}</h1>
+        <nav>
+            <a href="/" style="margin-left: 15px; font-weight: bold;">Home</a>
+            <a href="/about" style="margin-left: 15px;">About</a>
+            <a href="/publications" style="margin-left: 15px;">Publications</a>
+            <a href="/talks" style="margin-left: 15px;">Talks</a>
+        </nav>
+    </header>
+
+    <main>
+        {{ .Content }}
+    </main>
+
+    <footer style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 1rem; font-size: 0.8rem; opacity: 0.8;">
+        <p>© 2026 DQPM Project | Built with Hugo & Water.css</p>
+    </footer>
 </body>
 </html>
