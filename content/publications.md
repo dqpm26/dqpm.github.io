@@ -6,10 +6,7 @@ description: "Selected publications of the DQPM collaboration"
 # Selected Publications
 
 List of selected publications on the theoretical basis of the Dynamical Quasi-Particle Model (DQPM) and its implementation within the Quark-Gluon Plasma.
----
-title: "Publications"
-description: "Comprehensive list of DQPM collaboration publications"
----
+
 
 * **The Hot non-perturbative gluon plasma is an almost ideal colored liquid**, A. Peshier and W. Cassing, *Phys. Rev. Lett.* 94, 172301 (2005). [arXiv:hep-ph/0502138](https://arxiv.org/abs/hep-ph/0502138)
 * **QCD thermodynamics and confinement from a dynamical quasiparticle point of view**, W. Cassing, *Nucl. Phys. A* 791, 365–381 (2007). [arXiv:0704.1410](https://arxiv.org/abs/0704.1410)
@@ -23,7 +20,6 @@ description: "Comprehensive list of DQPM collaboration publications"
 
 * **Electric and magnetic response of hot QCD matter**, T. Steinert and W. Cassing, *Phys. Rev. C* 89, 035203 (2014). [arXiv:1312.3189](https://arxiv.org/abs/1312.3189)
 * **Covariant interacting Hadron-Resonance Gas model**, T. Steinert and W. Cassing, *Phys. Rev. C* 98, 014908 (2018). [arXiv:1803.10546](https://arxiv.org/abs/1803.10546)
-* **The QCD phase diagram within effective models**, T. Steinert, *PhD thesis*, U. Giessen (2018).
 
 * **Collisional processes of on-shell and off-shell heavy quarks**, H. Berrehrah et al., *Phys. Rev. C* 89, 054901 (2014). [arXiv:1308.5148](https://arxiv.org/abs/1308.5148)
 * **Dynamical collisional energy loss and transport properties of heavy quarks**, H. Berrehrah et al., *Phys. Rev. C* 90, 064906 (2014). [arXiv:1405.3243](https://arxiv.org/abs/1405.3243)
@@ -39,10 +35,16 @@ description: "Comprehensive list of DQPM collaboration publications"
 * **Diffusion coefficient matrix of the strongly interacting quark-gluon plasma**, J. A. Fotakis et al., *Phys. Rev. D* 104, 034014 (2021). [arXiv:2102.08140](https://arxiv.org/abs/2102.08140)
 * **Transport properties and equation-of-state of hot and dense QGP matter near the critical endpoint**, O. Soloveva et al., *Phys. Rev. D* 105, 054011 (2022). [arXiv:2108.08561](https://arxiv.org/abs/2108.08561)
 * **Extraction of the microscopic properties of quasiparticles using deep neural networks**, O. Soloveva et al., *Phys. Rev. C* 110, 034908 (2024). [arXiv:2311.15984](https://arxiv.org/abs/2311.15984)
-* **Transport properties of the strongly-interacting Quark-Gluon plasma**, O. Soloveva, *PhD thesis*, Goethe U. (2022).
 
 * **Exploring jet transport coefficients by elastic scattering in the strongly interacting quark-gluon plasma**, I. Grishmanovskii et al., *Phys. Rev. C* 106, 014903 (2022). [arXiv:2204.01561](https://arxiv.org/abs/2204.01561)
 * **Inelastic and elastic parton scattering in the strongly interacting quark-gluon plasma**, I. Grishmanovskii et al., *Phys. Rev. C* 109, 024911 (2024). [arXiv:2308.03105](https://arxiv.org/abs/2308.03105)
 * **Jet transport coefficients by elastic and radiative scatterings**, I. Grishmanovskii et al., *Phys. Rev. C* 110, 014908 (2024). [arXiv:2402.04923](https://arxiv.org/abs/2402.04923)
-* **Attenuation of jet partons in strongly interacting quark-gluon plasma**, I. Grishmanovskii, *PhD thesis*, Goethe U. (2024).
 * **Transport coefficients of heavy quarks by elastic and radiative scatterings**, I. Grishmanovskii et al., *Phys. Rev. D* 112, 014042 (2025). [arXiv:2503.22311](https://arxiv.org/abs/2503.22311)
+
+
+## PhD thesis
+* **The QCD phase diagram within effective models**, T. Steinert, *PhD thesis*, U. Giessen (2018).
+* **Transport properties of the strongly-interacting Quark-Gluon plasma**, O. Soloveva, *PhD thesis*, Goethe U. (2022).
+* **Attenuation of jet partons in strongly interacting quark-gluon plasma**, I. Grishmanovskii, *PhD thesis*, Goethe U. (2024).
+
+
