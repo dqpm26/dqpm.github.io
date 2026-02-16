@@ -8,18 +8,16 @@
 
     <style>
         :root {
-            /* Sfondo molto chiaro e moderno */
-            --background-body: #a1c0c9;
-            /* Testo grigio scuro (meno stancante del nero puro) */
+            /* Light grey-blue modern background */
+            --background-body: #b8d1d9;
             --text-main: #333333;
-            /* Blu scientifico per i link */
             --links: #133275;
-            /* Font leggermente più grande per la leggibilità mobile */
-            font-size: 18px;
+            /* INCREASED: Base font size for simple text readability */
+            font-size: 20px; 
         }
 
         body {
-            max-width: 900px; /* Più largo per sfruttare lo spazio desktop */
+            max-width: 900px; 
             line-height: 1.6;
             padding: 1rem;
             background-color: var(--background-body);
@@ -33,23 +31,26 @@
             border-bottom: 2px solid #e2e2e2;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
-            flex-wrap: wrap; /* Permette al menu di andare a capo su schermi piccoli */
+            flex-wrap: wrap; 
         }
 
         header h1 {
             margin: 0;
-            font-size: 1.6rem;
+            /* Adjusted for balance */
+            font-size: 1.8rem; 
             color: var(--links);
         }
 
         nav {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         nav a {
             text-decoration: none;
             font-weight: 600;
+            /* INCREASED: Larger navigation links */
+            font-size: 1.1rem; 
             transition: color 0.3s;
         }
 
@@ -58,12 +59,17 @@
             text-decoration: underline;
         }
 
-        /* Ottimizzazioni specifiche per Mobile */
+        /* REDUCED: Subsections titles sizing for home/content */
+        main h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+        main h3 { font-size: 1.2rem; margin-top: 1.2rem; }
+        main h4 { font-size: 1.1rem; }
+
+        /* Mobile Optimizations */
         @media (max-width: 600px) {
             header {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 1rem;
+                gap: 1.2rem;
             }
             
             nav {
@@ -73,10 +79,10 @@
             }
 
             nav a {
-                margin-left: 0; /* Rimuoviamo il margine per usare il gap */
+                font-size: 1rem; /* Slightly smaller on mobile to fit */
             }
             
-            font-size: 17px; /* Leggermente più piccolo su schermi minuscoli */
+            :root { font-size: 18px; }
         }
     </style>
 </head>
