@@ -42,7 +42,7 @@ List of selected publications on the theoretical basis of the Dynamical Quasi-Pa
 * **Transport coefficients of heavy quarks by elastic and radiative scatterings**, I. Grishmanovskii et al., *Phys. Rev. D* 112, 014042 (2025). [arXiv:2503.22311](https://arxiv.org/abs/2503.22311)
 
 
-## PhD thesis
+## PhD theses
 * **The QCD phase diagram within effective models**, T. Steinert, *PhD thesis*, U. Giessen (2018).
 * **Transport properties of the strongly-interacting Quark-Gluon plasma**, O. Soloveva, *PhD thesis*, Goethe U. (2022).
 * **Attenuation of jet partons in strongly interacting quark-gluon plasma**, I. Grishmanovskii, *PhD thesis*, Goethe U. (2024).
