@@ -2,7 +2,13 @@
 <html lang="en"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | DQPM Collaboration</title>
+    <title>
+        {{ if .IsHome }}
+            {{ .Site.Title }}
+        {{ else }}
+            {{ .Title }} | {{ .Site.Title }}
+        {{ end }}
+    </title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
 
@@ -91,7 +97,7 @@
     
         <div style="display: flex; align-items: center; gap: 15px;">
             <img src="/images/logo.png" alt="DQPM Logo" style="height: 60px; width: auto;">
-            <h1 style="margin: 0; font-size: 1.8rem; color: var(--links);">{{ DQPM }}</h1> 
+            <h1 style="margin: 0; font-size: 1.8rem; color: var(--links);">{{ .Site.Title }}</h1> 
         </div>
 
         <nav>
