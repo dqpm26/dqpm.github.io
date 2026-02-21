@@ -1,9 +1,9 @@
 baseURL = "https://dqpm26.github.io/"
 languageCode = "en"
-title = "DQPM Collaboration"
+title = "DQPM"
 
 [params]
-  description = "Dynamical Quasi-Particle Model for QGP"
+  description = "A Dynamical Quasi-Particle Model for QGP"
 
 [menu]
   [[menu.main]]
