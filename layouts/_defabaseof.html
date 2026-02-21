@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    
+    <link rel="icon" type="image/png" href="{{ "images/DQPM_logo.png" | relURL }}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root { 
+            --background-body: #b8d1d9; 
+            --text-main: #333333; 
+            --links: #133275; 
+            font-size: 20px; 
+        }
+        body { 
+            max-width: 900px; 
+            line-height: 1.6; 
+            padding: 1rem; 
+            background-color: var(--background-body); 
+        }
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 2px solid #e2e2e2; 
+            padding-bottom: 1rem; 
+            margin-bottom: 2rem; 
+            flex-wrap: wrap; 
+        }
+        .brand { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .brand img { height: 60px; width: auto; }
+        .brand h1 { margin: 0; font-size: 1.8rem; color: var(--links); }
+        nav { display: flex; gap: 20px; }
+        nav a { text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+        
+        /* Titoli sezioni */
+        main h2 { font-size: 1.4rem; margin-top: 1.5rem; }
+        main h3 { font-size: 1.2rem; margin-top: 1.2rem; }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+            nav { width: 100%; justify-content: space-between; }
+            :root { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <img src="{{ "images/DQPM_logo.png" | relURL }}" alt="DQPM Logo">
+            <h1>DQPM</h1>
+        </div>
+        <nav>
+          {{ range .Site.Menus.main }}<a href="{{ .URL | relURL }}">{{ .Name }}</a>{{ end }}
+        </nav>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer style="margin-top: 4rem; border-top: 1px solid #e2e2e2; padding-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+        <p>© 2026 DQPM | All rights reserved.</p>
+    </footer>
+</body>
+</html>
