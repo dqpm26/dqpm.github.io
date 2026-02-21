@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
+<html lang="en"> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | DQPM Collaboration</title>
+    <title>
+        {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+    </title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
 
     <style>
         :root {
-            /* Light grey-blue modern background */
             --background-body: #b8d1d9;
             --text-main: #333333;
             --links: #133275;
-            /* INCREASED: Base font size for simple text readability */
             font-size: 20px; 
         }
 
@@ -25,7 +26,6 @@
 
         header {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid #e2e2e2;
@@ -34,10 +34,23 @@
             flex-wrap: wrap; 
         }
 
-        header h1 {
+        /* Container per Logo + Titolo cliccabili */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .brand img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .brand h1 {
             margin: 0;
-            /* Adjusted for balance */
-            font-size: 1.8rem; 
+            font-size: 1.8rem;
             color: var(--links);
         }
 
@@ -49,8 +62,7 @@
         nav a {
             text-decoration: none;
             font-weight: 600;
-            /* INCREASED: Larger navigation links */
-            font-size: 1.1rem; 
+            font-size: 1.1rem;
             transition: color 0.3s;
         }
 
@@ -59,39 +71,27 @@
             text-decoration: underline;
         }
 
-        /* REDUCED: Subsections titles sizing for home/content */
         main h2 { font-size: 1.4rem; margin-top: 1.5rem; }
         main h3 { font-size: 1.2rem; margin-top: 1.2rem; }
-        main h4 { font-size: 1.1rem; }
 
-        /* Mobile Optimizations */
         @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1.2rem;
-            }
-            
-            nav {
-                margin-left: 0;
-                width: 100%;
-                justify-content: space-between;
-            }
-
-            nav a {
-                font-size: 1rem; /* Slightly smaller on mobile to fit */
-            }
-            
+            header { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+            nav { width: 100%; justify-content: space-between; gap: 10px; }
+            nav a { font-size: 1rem; }
             :root { font-size: 18px; }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>{{ .Title }}</h1>
+        <div class="brand">
+            <img src="{{ "images/DQPM_logo.png" | relURL }}" alt="DQPM Logo">
+            <h1>DQPM</h1>
+        </div>
+
         <nav>
           {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
           {{ end }}
         </nav>
     </header>
@@ -101,7 +101,7 @@
     </main>
 
     <footer style="margin-top: 4rem; border-top: 1px solid #e2e2e2; padding-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
-        <p>© 2026 DQPM Project | Built with Hugo & Water.css</p>
+        <p>© 2026 DQPM Collaboration | All rights reserved.</p>
     </footer>
 </body>
 </html>
