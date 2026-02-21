@@ -84,14 +84,14 @@
 </head>
 <body>
     <header>
-        <a href="/" class="brand">
-            <img src="/images/DQPM_logo.png" alt="DQPM Logo">
+        <div class="brand">
+            <img src="{{ "images/DQPM_logo.png" | relURL }}" alt="DQPM Logo">
             <h1>DQPM</h1>
-        </a>
+        </div>
 
         <nav>
           {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
           {{ end }}
         </nav>
     </header>
