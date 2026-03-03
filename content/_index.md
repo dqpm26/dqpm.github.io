@@ -13,7 +13,7 @@ system of massless partons which might be described by perturbative QCD (pQCD).
 However, experimental observations have repeatedly shown that the QGP medium
 is, instead, strongly interacting.
 
-The DQPM allows to include the non-perturbative features of the QGP, in a 
+The DQPM allows to reproduce the non-perturbative features of the QGP, in a 
 treatment that accounts both for finite temperature and chemical potential.
 The determination and extraction of complex self-energies for the partonic
 degrees of freedom is performed by fitting lattice QCD calculations at 
